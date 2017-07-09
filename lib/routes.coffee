@@ -34,6 +34,11 @@ module.exports =
       Router.prototype[method] = (alias, endpoint, middleware) ->
         @addRoute alias, method, endpoint, Router.adapt(endpoint + if method not in ["get", "post"] then "?_method=#{method.toUpperCase()}" else ""), middleware
 
+    scope: (prefix) ->
+      if prefix.charAt(0) != "/"
+        prefix = "/" + prefix
+      new Router(@app, @prefix + prefix)
+
 
     @adapt = (endpoint) ->
       tokens = endpoint.split(/:[^/]+/)
