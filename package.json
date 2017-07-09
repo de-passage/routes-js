@@ -1,0 +1,23 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "description": "Route manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee-script/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/de-passage/routes-js.git"
+  },
+  "author": "Sylvain Leclercq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/de-passage/routes-js/issues"
+  },
+  "homepage": "https://github.com/de-passage/routes-js#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
